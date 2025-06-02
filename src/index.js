@@ -8,16 +8,12 @@ let selectedAirplane = 1;
 let playerTurn = true;
 let canEditGrid = true
 
-/* UP */
 positions[0] = [[-2, 1], [-1, 1], [0, 1], [1, 1], [2, 1], [0, 2], [-1, 3], [0, 3], [1, 3]];
 
-/* DOWN */
 positions[1] = [[-2, -1], [-1, -1], [0, -1], [1, -1], [2, -1], [0, -2], [-1, -3], [0, -3], [1, -3]];
 
-/* LEFT */
 positions[2] = [[1, -2], [1, -1], [1, 0], [1, 1], [1, 2], [2, 0], [3, -1], [3, 0], [3, 1]];
 
-/* RIGHT */
 positions[3] = [[-1, -2], [-1, -1], [-1, 0], [-1, 1], [-1, 2], [-2, 0], [-3, -1], [-3, 0], [-3, 1]];
 
 
@@ -39,7 +35,6 @@ function loadImages() {
 		let img = new Image();
 		let name = "assets/av" + element + ".svg";
 		img.src = name;
-		// Assign the loaded image to a global variable or use it as needed
 	}
 	console.log = "Done";
 }
@@ -134,8 +129,6 @@ function initializePlayer(preview) {
 
         orientare = parseInt(document.getElementById("dir" + j).value);
 
-        // checking the position of the airplane
-
         if (varfx < 0 || varfx >= gridX || varfy < 0 || varfy >= gridY || grid[varfy][varfx][0] == "a") {
             showMessage("Plane " + j + " was not set right!!!");
             document.getElementById("pozx" + j).focus();
@@ -194,7 +187,6 @@ function initializeComputer() {
 			orientare = Math.round(Math.random() * 3);
 			ok = true;
 
-			// checking the position of the airplane
 			if (grid[varfy][varfx][0] == "a") {
 				ok = false;
 				continue;
@@ -445,11 +437,9 @@ function previewHover(y, x) {
     
     let orientare = parseInt(document.getElementById("dir" + selectedAirplane).value);
     let previewCells = [];
-    
-    // Add the head position
+
     previewCells.push([y, x]);
-    
-    // Add the airplane body positions
+
     for (let p = 0; p < 9; p++) {
         let pozx = positions[orientare][p][0] + x;
         let pozy = positions[orientare][p][1] + y;
@@ -458,8 +448,7 @@ function previewHover(y, x) {
             previewCells.push([pozy, pozx]);
         }
     }
-    
-    // Apply preview style to all cells
+
     previewCells.forEach(([py, px]) => {
         let button = document.querySelector(`button[onclick*="playerGridClick(${py},${px})"]`);
         if (button) {
