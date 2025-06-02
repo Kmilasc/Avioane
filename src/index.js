@@ -417,19 +417,32 @@ function displayEnemyAirplanes() {
 }
 
 function validateCoordinateInput(e) {
-	const input = e;
-	const value = parseInt(input.value);
-	const max = parseInt(input.getAttribute("max"));
-	const min = parseInt(input.getAttribute("min"));
+    const input = e;
+    const value = input.value;
 
-    if (isNaN(value) || value < min || value > max) {
-		input.value = "";
-		showMessage(`Please enter a number between ${min} and ${max}.`);
-		input.focus();
-	} else {
-		preview();
-	}
+    if (value === "") {
+        input.value = "";
+        return;
+    }
 
+    if (!/^\d+$/.test(value)) {
+        input.value = "";
+        showMessage("Please enter only whole numbers.");
+        input.focus();
+        return;
+    }
+    
+    const numValue = parseInt(value);
+    const max = parseInt(input.getAttribute("max"));
+    const min = parseInt(input.getAttribute("min"));
+
+    if (numValue < min || numValue > max) {
+        input.value = "";
+        showMessage(`Please enter a number between ${min} and ${max}.`);
+        input.focus();
+    } else {
+        preview();
+    }
 }
 
 function previewHover(y, x) {
