@@ -15,6 +15,7 @@
   </head>
 
   <body onload="preview()">
+    <div id="messageBox"></div>
     <div class="scoreboard">
       <div class="playerSideScore">
         <h2>Player</h2>
@@ -46,8 +47,8 @@
           </div>
           <div class="plane">
             <p>1.</p>
-            <input type="text" size="5" id="pozx1" placeholder="X" onfocus="javascript:selectedAirplane=1" />
-            <input type="text" size="5" id="pozy1" placeholder="Y" onfocus="javascript:selectedAirplane=1" />
+            <input type="number" min="1" max="16"  size="5" id="pozx1" placeholder="X" onkeyup="validateCoordinateInput(this)" onfocus="javascript:selectedAirplane=1" />
+            <input type="number" min="1" max="16" size="5" id="pozy1" placeholder="Y" onkeyup="validateCoordinateInput(this)" onfocus="javascript:selectedAirplane=1" />
               <select id="dir1" onfocus="javascript:selectedAirplane=1">
                 <option value="0">UP</option>
                 <option value="1">DOWN</option>
@@ -57,8 +58,8 @@
           </div>
           <div class="plane">
             <p>2.</p>
-            <input type="text" size="5" id="pozx2" placeholder="X" onfocus="javascript:selectedAirplane=2" />
-            <input type="text" size="5" id="pozy2" placeholder="Y" onfocus="javascript:selectedAirplane=2" />
+            <input type="number" min="1" max="16"  size="5" id="pozx2" placeholder="X" onkeyup="validateCoordinateInput(this)" onfocus="javascript:selectedAirplane=2" />
+            <input type="number" min="1" max="16"  size="5" id="pozy2" placeholder="Y" onkeyup="validateCoordinateInput(this)" onfocus="javascript:selectedAirplane=2" />
             <select id="dir2" onfocus="javascript:selectedAirplane=2">
               <option value="0">UP</option>
               <option value="1">DOWN</option>
@@ -68,8 +69,8 @@
           </div>
           <div class="plane">
             <p>3.</p>
-            <input type="text" size="5" id="pozx3" placeholder="X" onfocus="javascript:selectedAirplane=3" />
-            <input type="text" size="5" id="pozy3" placeholder="Y" onfocus="javascript:selectedAirplane=3" />
+            <input type="number" min="1" max="16"  size="5" id="pozx3" placeholder="X" onkeyup="validateCoordinateInput(this)" onfocus="javascript:selectedAirplane=3" />
+            <input type="number" min="1" max="16"  size="5" id="pozy3" placeholder="Y" onkeyup="validateCoordinateInput(this)" onfocus="javascript:selectedAirplane=3" />
 
               <select id="dir3" onfocus="javascript:selectedAirplane=3">
                 <option value="0">UP</option>
@@ -81,8 +82,8 @@
           </div>
           <div class="plane">
             <p>4.</p>
-            <input type="text" size="5" id="pozx4" placeholder="X" onfocus="javascript:selectedAirplane=4" />
-            <input type="text" size="5" id="pozy4" placeholder="Y" onfocus="javascript:selectedAirplane=4" />
+            <input type="number" min="1" max="16"  size="5" id="pozx4" placeholder="X"  onkeyup="validateCoordinateInput(this)" onfocus="javascript:selectedAirplane=4" />
+            <input type="number" min="1" max="16"  size="5" id="pozy4" placeholder="Y" onkeyup="validateCoordinateInput(this)" onfocus="javascript:selectedAirplane=4" />
               <select id="dir4" onfocus="javascript:selectedAirplane=4">
                 <option value="0">UP</option>
                 <option value="1">DOWN</option>
@@ -92,8 +93,8 @@
           </div>
           <div class="plane">
             <p>5.</p>
-            <input type="text" size="5" id="pozx5" placeholder="X" onfocus="javascript:selectedAirplane=5" />
-            <input type="text" size="5" id="pozy5" placeholder="Y" onfocus="javascript:selectedAirplane=5" />
+            <input type="number" min="1" max="16"  size="5" id="pozx5" placeholder="X" onkeyup="validateCoordinateInput(this)" onfocus="javascript:selectedAirplane=5" />
+            <input type="number" min="1" max="16"  size="5" id="pozy5" placeholder="Y" onkeyup="validateCoordinateInput(this)" onfocus="javascript:selectedAirplane=5" />
             <select id="dir5" onfocus="javascript:selectedAirplane=5">
                 <option value="0">UP</option>
                 <option value="1">DOWN</option>

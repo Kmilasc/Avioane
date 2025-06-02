@@ -189,7 +189,6 @@ button:not(:hover) .overlay {
   font-weight: 600;
 }
 
-/* Player side */
 .scoreboard .playerSideScore {
   margin-left: 64px;
   display: flex;
@@ -209,7 +208,6 @@ button:not(:hover) .overlay {
   justify-content: flex-start;
 }
 
-/* Computer side */
 .scoreboard .computerSideScore {
   margin-right: 64px;
   display: flex;
@@ -352,14 +350,15 @@ button:not(:hover) .overlay {
   font-weight: 400;
 }
 
-#replayButton{
+#replayButton {
   align-items: center;
   display: flex;
   justify-content: center;
   margin-top: 32px;
+  width: 100%;
 }
 
-#replayButton button{
+#replayButton button {
   background-color: #f43f5e;
   border: 0;
   border-radius: 32px;
@@ -368,4 +367,36 @@ button:not(:hover) .overlay {
   font-weight: 500;
   font-size: 16px;
   padding: 16px 32px;
+  min-width: 200px;
+  transition: all 0.2s ease;
+}
+
+#replayButton button:hover {
+  background-color: #d92b48;
+  transform: scale(1.05);
+}
+
+#messageBox {
+  display: none;
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #d92b48;
+  padding: 14px 32px;
+  border-radius: 10px;
+  border: 2px solid #d92b48;
+  z-index: 1000;
+  font-size: 1.1rem;
+  font-family: 'Inter', Arial, sans-serif;
+  box-shadow: 0 2px 12px rgba(30, 64, 175, 0.10);
+  opacity: 0.97;
+  text-align: center;
+  min-width: 180px;
+  max-width: 90vw;
+  word-break: break-word;
+  letter-spacing: 0.2px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
