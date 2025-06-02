@@ -61,7 +61,7 @@ button img {
   padding: 0px;
   border: solid 1px #ffff;
   margin: 0px;
-  background-color: #fff;
+  background-color: transparent;
   position: relative;
   cursor: pointer;
   display: inline-flex;
@@ -399,4 +399,17 @@ button:not(:hover) .overlay {
   letter-spacing: 0.2px;
   font-weight: 500;
   transition: all 0.3s ease;
+}
+
+.preview-hover {
+  background-color: #f43f5e !important;
+  border: 1px solid #f43f5e !important;
+}
+
+.preview-hover .overlay {
+  display: none;
+}
+
+.preview-hover img {
+  opacity: 0.5;
 }
