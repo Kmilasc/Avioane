@@ -17,6 +17,15 @@ Durante a disciplina, foram coletadas uma série de possíveis solicitações de
 
 Nossa principal tarefa foi adicionar padrões de código, diminuir a complexidade cognitiva, realizar a internacionalização do código e implementar uma nova interface.
 
+## Alterações Realizadas
+
+Durante o processo de manutenção 2025/01, foram feitas as seguintes melhorias no jogo:
+
+- **Substituição de `alert()` por mensagens visuais na interface**: para melhorar a experiência do usuário, mensagens de status passaram a ser exibidas diretamente na tela.
+- **Validação simples dos inputs**: foram adicionadas verificações básicas para impedir ações inválidas ou duplicadas.
+- **Pré-visualização do posicionamento dos aviões**: ao posicionar um avião, o jogador pode ver uma prévia antes de confirmar a posição, facilitando a visualização e reduzindo erros.
+- **Reinício do jogo com reset de aviões restantes**: ao reiniciar o jogo, o número de aviões restantes agora é corretamente reiniciado e exibido.
+
 ## Trabalhos Futuros
 
 Algumas ideias para implementação futura incluem a adição de um modo multiplayer utilizando websockets e a migração do desenvolvimento manual para um framework JavaScript, a fim de facilitar a manutenção e expansão do jogo.
